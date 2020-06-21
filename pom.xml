@@ -9,7 +9,7 @@
 	<groupId>com.ecom.customer</groupId>
 	<artifactId>ecustomer</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>eproduct</name>
+	<name>ecustomer</name>
 	<description>Customer service for e-commerce</description>
 
 	<properties>
