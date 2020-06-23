@@ -10,6 +10,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
 
 import org.hibernate.annotations.ColumnDefault;
 import org.hibernate.annotations.GenericGenerator;
@@ -21,6 +23,7 @@ import org.hibernate.annotations.Type;
  * Shopping Cart as a resource
  */
 @Entity
+@Table
 public class ShoppingCart {
 	
 	@Id
@@ -31,7 +34,8 @@ public class ShoppingCart {
 	@Type(type = "uuid-char")
 	private UUID cartId;
 	
-	@JoinColumn(name = "customerId", referencedColumnName = "CUST_ID")
+	@OneToOne
+	@JoinColumn(name = "customerId")
 	private Customer owner;
 	
 	@Column(name = "LAST_UPDATE")

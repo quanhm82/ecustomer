@@ -3,10 +3,12 @@ package com.ecom.customer.model;
 import java.util.UUID;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
 import org.hibernate.annotations.ColumnDefault;
 import org.hibernate.annotations.GenericGenerator;
@@ -16,6 +18,8 @@ import org.hibernate.annotations.Type;
  * @author quanhoang
  * Item in Cart as resource
  */
+@Entity
+@Table
 public class CartItem {
 	
 	@Id
