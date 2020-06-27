@@ -39,6 +39,9 @@ public class CartItem {
 	
 	@Column(name = "PROD_NAME")
 	private String productName;
+	
+	@Column(name = "QUANTITY")
+	private double quantity;
 
 	public ShoppingCart getCart() {
 		return cart;
@@ -66,5 +69,13 @@ public class CartItem {
 
 	public UUID getCartItemId() {
 		return cartItemId;
+	}
+
+	public double getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(double quantity) {
+		this.quantity = quantity;
 	}
 }
