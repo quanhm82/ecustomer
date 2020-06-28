@@ -31,6 +31,9 @@ public class Customer {
 	@Type(type = "uuid-char")
 	private UUID customerId;
 	
+	@Column(name = "EMAIL")
+	private String email;
+	
 	@Column(name = "FULL_NAME")
 	private String fullName;
 	
@@ -100,5 +103,13 @@ public class Customer {
 
 	public UUID getCustomerId() {
 		return customerId;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 }
