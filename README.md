@@ -13,6 +13,6 @@ Starting eOrder instance with "dev" profile.
 ```sh
 $ cd target
 ...
-$ java -jar ecustomer-{version}.jar -Dspring.profile.active=dev
+$ java -jar ecustomer-{version}.jar --spring.profiles.active=dev
 ```
 Access eCustomer by http://localhost:8080/swagger-ui.html
